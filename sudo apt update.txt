@@ -1,0 +1,84 @@
+sudo apt update
+sudo apt upgrade
+
+sudo apt-get install  curl apt-transport-https ca-certificates software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+sudo apt update
+
+apt-cache policy docker-ce
+
+sudo apt install docker-ce
+
+sudo systemctl status docker
+
+-----------------------------
+
+sudo docker run hello-world
+
+-----------------------------
+
+sudo usermod -aG docker $(whoami)
+
+-----------------------------
+
+docker attach - Adjunta flujos de entrada, salida y error estándar locales a un contenedor en ejecución
+docker build - Crea una imagen a partir de un Dockerfile
+docker builder - Administra compilaciones
+docker checkpoint - Administra puntos de control
+docker commit - Crea una nueva imagen a partir de los cambios de un contenedor
+docker config - Administra configuraciones de Docker
+docker container - Administra contenedores
+docker context - Administra contextos
+docker cp - Copia archivos/carpetas entre un contenedor y el sistema de archivos local
+docker create - Crea un nuevo contenedor
+docker diff - Inspecciona cambios en archivos o directorios en el sistema de archivos de un contenedor
+docker events - Obtener eventos en tiempo real del servidor
+docker exec - Ejecuta un comando en un contenedor en ejecución
+docker export - Exporta el sistema de archivos de un contenedor como un archivo tar
+docker history - Muestra el historial de una imagen
+docker image- Administra imágenes
+docker images - Lista imágenes
+docker import - Importa el contenido de un tarball para crear una imagen del sistema de archivos
+docker info - Muestra información de todo el sistema
+docker inspect - Devuelve información de bajo nivel sobre objetos Docker
+docker kill - Elimina uno o más contenedores en ejecución
+docker load - Carga una imagen desde un archivo tar o STDIN
+docker login - Inicia sesión en un registro de Docker
+docker logout - Cierra la sesión de un registro de Docker
+docker logs - Recupera los registros de un contenedor.
+docker manifest - Administra manifiestos de imágenes de Docker y listas de manifiestos
+docker network - Administra redes
+docker node - Administra nodos Swarm
+docker pause - Pausa todos los procesos dentro de uno o más contenedores
+docker plugin - Administra complementos
+docker port - Lista las asignaciones de puertos o una asignación específica para el contenedor
+docker ps - Lista los contenedores
+docker pull - Extrae una imagen o un repositorio de un registro
+docker push - Envía una imagen o un repositorio a un registro
+docker rename - Cambia el nombre de un contenedor
+docker restart - Reinicia uno o más contenedores
+docker rm - Elimina uno o más contenedores
+docker rmi - Elimina una o más imágenes
+docker run - Ejecuta un comando en un nuevo contenedor
+docker save - Guarda una o más imágenes en un archivo tar (transmitido a STDOUT de forma predeterminada)
+docker search - Busca imágenes en Docker Hub
+docker secret - Administra los secretos de Docker
+docker service - Administra servicios
+docker stack - Administra stacks
+docker start - Inicia uno o más contenedores detenidos
+docker stats - Muestra una transmisión en vivo de las estadísticas de uso de recursos de los contenedores
+docker stop - Detiene uno o más contenedores en ejecución
+docker swarm - Administra swarm
+docker system - Administra Docker
+docker tag - Crea una etiqueta TARGET_IMAGE que haga referencia a SOURCE_IMAGE
+docker top - Muestra los procesos en ejecución de un contenedor
+docker trust - Administra la confianza en las imágenes de Docker
+docker unpause - Reanuda todos los procesos dentro de uno o más contenedores
+docker update - Actualiza la configuración de uno o más contenedores
+docker version - Muestra la información de la versión de Docker
+docker volume - Administra volúmenes
+docker wait - Bloquea hasta que uno o más contenedores se detengan, luego imprima sus códigos de salida
